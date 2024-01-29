@@ -141,7 +141,7 @@ aside{
 }
 
 aside .top {
-    background: white;
+    background: var(--color-background);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -151,14 +151,14 @@ aside .logo{
     display: flex;
     gap: 0.8rem;
 }
-
-aside .logo img {
-    width: 100%;
-    height: 100%;
+aside .logo h3{
+    color: #181a1e;
 }
-
 aside .close{
     display: none;
+}
+aside .close .bx{
+    font-size: 1.8rem;
 }
 
 
@@ -180,7 +180,7 @@ aside .sidebar a{
     height: 3.7rem;
     transition: all 300ms ease;
 }
-aside .sidebar a span {
+aside .sidebar a .bx {
     font-size: 1.0rem;
     transition: all 300ms ease;
 }
@@ -255,7 +255,7 @@ main .insights > div{
 main .insights > div:hover{
     box-shadow: none;
 }
-main .insights > div span{
+main .insights > div .bx{
     background: var(--color-primary);
     padding: 0.5rem;
     border-radius: 50%;
@@ -263,10 +263,10 @@ main .insights > div span{
     font-size: 2rem;
 }
 
-main .insights > div.expense span{
+main .insights > div.expense .bx{
     background: var(--color-danger);
 }
-main .insights > div.income span{
+main .insights > div.income .bx{
     background: var(--color-success);
 }
 
@@ -591,11 +591,11 @@ main .recent-order a{
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
-    animation: showMenu 400ms ease;
+    animation: showMenu 400ms ease forwards;
 }
 
 @keyframes showMenu {
-    to {
+    to{
         left: 0;
     }
 }
